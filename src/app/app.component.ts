@@ -25,11 +25,11 @@ export class AppComponent implements OnInit {
     this._translateService.use(LANGS.IT);
   }
 
-  ngOnInit() {
+  ngOnInit(): void {
     this.initConfig().then();
   }
 
-  private async initConfig() {
+  private async initConfig(): Promise<void> {
     this._primeNgConfig.ripple = true;
     const get$ = this._translateService.get(PRIMENG_GLOBAL_TRANSLATIONS);
     const translation = await firstValueFrom(get$);

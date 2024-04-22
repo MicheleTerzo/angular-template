@@ -27,7 +27,7 @@ export enum MESSAGE_TYPES {
 }
 
 export enum MESSAGE_KEYS {
-  NOTIFICATION = 'notification',
+  NOTIFICATION = 'notification'
 }
 
 export enum IMAGE_EXTENSIONS {

@@ -20,13 +20,11 @@ function HttpLoaderFactory(http: HttpBackend): MultiTranslateHttpLoader {
 }
 
 function translateFactory(translate: TranslateService) {
-  return async () => {
+  return async (): Promise<unknown> => {
     translate.setDefaultLang(LANGS.IT);
     translate.use(LANGS.IT);
     return new Promise(resolve => {
-      translate.onLangChange.subscribe(() => resolve(() => {
-        })
-      );
+      translate.onLangChange.subscribe(() => resolve(() => {}));
     });
   };
 }
