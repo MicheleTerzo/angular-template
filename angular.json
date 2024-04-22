@@ -52,7 +52,9 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.scss"
+              "src/styles.scss",
+              "primeng/resources/themes/lara-dark-teal/theme.css",
+              "node_modules/primeflex/primeflex.css"
             ],
             "scripts": []
           },
